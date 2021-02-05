@@ -1,0 +1,217 @@
+@import url(../css/fonts.css);
+
+:root {
+
+  /* Theme font-family */
+  --Montserrat: 'Montserrat',sans-serif;
+  --Raleway:'Raleway',sans-serif;
+  --Roboto:'Roboto',sans-serif;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--Montserrat);
+  margin: 0;
+  background: #eee;
+  height:auto;
+}
+
+h1{
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2{
+  font-family: var(--Raleway);
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+img{
+  display: block;
+  width: 100%;
+  height: 300px;
+}
+
+main{
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
+  -30px 0px 40 rgba(0,0,0,0.1);
+}
+
+#landing{
+  background: #fff;
+}
+
+#landing-text{
+  display: flex;
+  flex: 0 1 40vw;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+#landing-text h2{
+  color: #888;
+}
+
+#landing-image{
+  background: url('../img/landing.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50vh;
+  flex:0 1 60vw;
+  margin: 0;
+
+}
+
+.btn, .button-accent{
+  padding: 0.5rem 2rem;
+  text-transform: capitalize;
+  font-weight:100;
+  border: 1px #ccc solid;
+  display: inline-block;
+  margin: 2rem 0 0;
+  border-radius: 50px;
+  text-decoration: none;
+  color:#333;
+  transition: background 500ms ease;
+}
+
+.button-accent{
+  margin-left:1.5rem;
+  margin-right: 2rem;
+  color:#f4f4f4;
+}
+
+.btn:hover, .button-accent:hover{
+  background: #f4f4f4;
+  color:#111;
+}
+
+#header{
+  padding: 1.5rem;
+  text-align: center;
+  background: #333;
+  color: #fff;
+}
+
+#header h2{
+  border-left: dotted 1px #fff;
+  border-right: dotted 1px #fff;
+  display: inline-block;
+  padding-right:1rem;
+  padding-left: 1rem;
+}
+/*images*/
+
+
+footer{
+  text-align: center;
+  padding: 2rem 1rem;
+  margin:auto;
+  color: #333;
+}
+
+footer h3{
+  font-size: 2.5rem;
+  font-family: var(--Raleway);
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+footer p {
+  word-spacing: .03rem;
+  letter-spacing: .02rem;
+  
+}
+/*social- contact*/
+.social-contact{
+  margin-left:8rem;
+}
+
+
+.contain img{
+  padding:0.4rem;
+  width:18%;
+  height:auto;
+  border-radius: 50%;
+  float: left;
+}
+
+/*images*/
+.box{
+  position: relative;
+}
+
+.port-disc{
+  position: absolute;
+  z-index: 100;
+  bottom: 50px;
+  transform: translateX(-50%);
+  left:50%;
+  color: #fff;
+  background: rgba(0,0,0,.75);
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.port-disc p{
+  text-transform: capitalize;
+  font-size: 1.2rem
+}
+
+
+/*media queries 500px and up*/
+@media(min-width:500px){
+  #landing{
+    /* display: flex; */
+    height: 60%;
+    flex: 0 0 100;
+  }
+
+  #landing-text{
+    height: 100vh;
+  }
+
+  #landing-image{
+    height:100vh;
+    background-position:left;
+  }
+  
+.boxes{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+}
+}
+
+/*scree 700px up*/
+@media(min-width:700px){
+
+  #landing{
+    display: flex;
+    height: 100%;
+  }
+  .btn{padding:1rem 3rem;
+  }
+  .boxes{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+  }
+
+  
+}
